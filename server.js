@@ -9,13 +9,13 @@ var sheetCtrl = require('./controllers/sheetCtrl');
 
 var app = express();
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, '/../', 'node_modules')))
-
-
 app.use(cors());
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'node_modules')));
 
 app.listen(port, function() {
   console.log('listening on:', port);

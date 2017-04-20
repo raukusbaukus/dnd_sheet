@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html ng-app="dndSheets">
-  <head>
-    <meta charset="utf-8">
-    <base href="/">
-    <title>D&D Character Sheets</title>
-  </head>
-  <body ng-controller="mainCtrl">
-    <h1>D&D Character Sheets</h1>
-    <input type="text" ng-model="hello">
-    {{hello}}
+<html ng-app="dndSheet">
 
+<head>
+  <meta charset="utf-8">
+  <base href="/">
+  <title>D&D Character Sheets</title>
+  <link href="/stylesheets/styles.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+</head>
 
-    <script src="/angular/angular.js"></script>
-    <!-- <script src="/angular-ui-router/release/angular-ui-router.min.js"></script> -->
-    <script src="dndSheet.js"></script>
-  </body>
+<body ng-controller="mainCtrl">
+  <h1>D&D Character Sheets</h1>
+
+  <section-wrapper></section-wrapper>
+
+  <script src="/angular/angular.js"></script>
+  <script src="/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="dndSheet.js"></script>
+</body>
+
 </html>

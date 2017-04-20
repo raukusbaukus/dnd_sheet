@@ -1,0 +1,21 @@
+<form>
+    <p>
+        <table>
+            <tr>
+                <th>Skill</th>
+                <th>Proficiency</th>
+                <th>Expertise</th>
+                <th>Ability</th>
+                <th>Ability Mod</th>
+                <th>Total Mod</th>
+            </tr>
+            <tr>
+                <td>Acrobatics</td>
+                <td><input id="acrobaticsProf" type="checkbox" ng-model="$ctrl.acrobatics.prof" ng-change="$ctrl.updateSkills()" /></td>
+                <td><input id="acrobaticsExp" type="checkbox" ng-model="$ctrl.acrobatics.exp" ng-change="$ctrl.updateSkills()" /></td>
+                <td>{{ $ctrl.ability.dexMod }}</td>
+                <td><input id="acrobaticsMod" type="number" ng-model="$ctrl.ability.dexMod" /></td>
+            </tr>
+        </table>
+    </p>
+</form>
