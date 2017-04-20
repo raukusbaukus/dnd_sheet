@@ -1,5 +1,6 @@
 <form>
     <p>
+      <label for="jackOfAllTrades">Jack of All Trades? </label><input id="jackOfAllTrades" type="checkbox" ng-model="$ctrl.jackOfAllTrades" ng-change="$ctrl.updateSkills()" />
         <table>
             <tr>
                 <th>Skill</th>
@@ -13,8 +14,127 @@
                 <td>Acrobatics</td>
                 <td><input id="acrobaticsProf" type="checkbox" ng-model="$ctrl.acrobatics.prof" ng-change="$ctrl.updateSkills()" /></td>
                 <td><input id="acrobaticsExp" type="checkbox" ng-model="$ctrl.acrobatics.exp" ng-change="$ctrl.updateSkills()" /></td>
-                <td>{{ $ctrl.ability.dexMod }}</td>
+                <td>DEX</td>
                 <td><input id="acrobaticsMod" type="number" ng-model="$ctrl.ability.dexMod" /></td>
+            </tr>
+            <tr>
+                <td>Animal Handling</td>
+                <td><input id="animalhandlingProf" type="checkbox" ng-model="$ctrl.animalhandling.prof" ng-change="$ctrl.updateSkills()" /></td>
+                <td><input id="animalhandlingExp" type="checkbox" ng-model="$ctrl.animalhandling.exp" ng-change="$ctrl.updateSkills()" /></td>
+                <td>WIS</td>
+                <td><input id="animalhandlingMod" type="number" ng-model="$ctrl.ability.wisMod" /></td>
+            </tr>
+            <tr>
+                <td>Arcana</td>
+                <td><input id="arcanaProf" type="checkbox" ng-model="$ctrl.arcana.prof" ng-change="$ctrl.updateSkills()" /></td>
+                <td><input id="arcanaExp" type="checkbox" ng-model="$ctrl.arcana.exp" ng-change="$ctrl.updateSkills()" /></td>
+                <td>INT</td>
+                <td><input id="arcanaMod" type="number" ng-model="$ctrl.ability.intMod" /></td>
+            </tr>
+            <tr>
+                <td>Athletics</td>
+                <td><input id="athleticsProf" type="checkbox" ng-model="$ctrl.athletics.prof" ng-change="$ctrl.updateSkills()" /></td>
+                <td><input id="athleticsExp" type="checkbox" ng-model="$ctrl.athletics.exp" ng-change="$ctrl.updateSkills()" /></td>
+                <td>STR</td>
+                <td><input id="athleticsMod" type="number" ng-model="$ctrl.ability.strMod" /></td>
+            </tr>
+            <tr>
+                <td>Deception</td>
+                <td><input id="deceptionProf" type="checkbox" ng-model="$ctrl.deception.prof" ng-change="$ctrl.updateSkills()" /></td>
+                <td><input id="deceptionExp" type="checkbox" ng-model="$ctrl.deception.exp" ng-change="$ctrl.updateSkills()" /></td>
+                <td>CHA</td>
+                <td><input id="deceptionMod" type="number" ng-model="$ctrl.ability.chaMod" /></td>
+            </tr>
+            <tr>
+                <td>History</td>
+                <td><input id="historyProf" type="checkbox" ng-model="$ctrl.history.prof" ng-change="$ctrl.updateSkills()" /></td>
+                <td><input id="historyExp" type="checkbox" ng-model="$ctrl.history.exp" ng-change="$ctrl.updateSkills()" /></td>
+                <td>INT</td>
+                <td><input id="historyMod" type="number" ng-model="$ctrl.ability.intMod" /></td>
+            </tr>
+            <tr>
+                <td>Insight</td>
+                <td><input id="insightProf" type="checkbox" ng-model="$ctrl.insight.prof" ng-change="$ctrl.updateSkills()" /></td>
+                <td><input id="insightExp" type="checkbox" ng-model="$ctrl.insight.exp" ng-change="$ctrl.updateSkills()" /></td>
+                <td>WIS</td>
+                <td><input id="insightMod" type="number" ng-model="$ctrl.ability.wisMod" /></td>
+            </tr>
+            <tr>
+                <td>Intimidation</td>
+                <td><input id="intimidationProf" type="checkbox" ng-model="$ctrl.intimidation.prof" ng-change="$ctrl.updateSkills()" /></td>
+                <td><input id="intimidationExp" type="checkbox" ng-model="$ctrl.intimidation.exp" ng-change="$ctrl.updateSkills()" /></td>
+                <td>CHA</td>
+                <td><input id="intimidationMod" type="number" ng-model="$ctrl.ability.chaMod" /></td>
+            </tr>
+            <tr>
+                <td>Investigation</td>
+                <td><input id="investigationProf" type="checkbox" ng-model="$ctrl.investigation.prof" ng-change="$ctrl.updateSkills()" /></td>
+                <td><input id="investigationExp" type="checkbox" ng-model="$ctrl.investigation.exp" ng-change="$ctrl.updateSkills()" /></td>
+                <td>INT</td>
+                <td><input id="investigationMod" type="number" ng-model="$ctrl.ability.intMod" /></td>
+            </tr>
+            <tr>
+                <td>Medicine</td>
+                <td><input id="medicineProf" type="checkbox" ng-model="$ctrl.medicine.prof" ng-change="$ctrl.updateSkills()" /></td>
+                <td><input id="medicineExp" type="checkbox" ng-model="$ctrl.medicine.exp" ng-change="$ctrl.updateSkills()" /></td>
+                <td>WIS</td>
+                <td><input id="medicineMod" type="number" ng-model="$ctrl.ability.wisMod" /></td>
+            </tr>
+            <tr>
+                <td>Nature</td>
+                <td><input id="natureProf" type="checkbox" ng-model="$ctrl.nature.prof" ng-change="$ctrl.updateSkills()" /></td>
+                <td><input id="natureExp" type="checkbox" ng-model="$ctrl.nature.exp" ng-change="$ctrl.updateSkills()" /></td>
+                <td>INT</td>
+                <td><input id="natureMod" type="number" ng-model="$ctrl.ability.intMod" /></td>
+            </tr>
+            <tr>
+                <td>Perception</td>
+                <td><input id="perceptionProf" type="checkbox" ng-model="$ctrl.perception.prof" ng-change="$ctrl.updateSkills()" /></td>
+                <td><input id="perceptionExp" type="checkbox" ng-model="$ctrl.perception.exp" ng-change="$ctrl.updateSkills()" /></td>
+                <td>WIS</td>
+                <td><input id="perceptionMod" type="number" ng-model="$ctrl.ability.wisMod" /></td>
+            </tr>
+            <tr>
+                <td>Performance</td>
+                <td><input id="performanceProf" type="checkbox" ng-model="$ctrl.performance.prof" ng-change="$ctrl.updateSkills()" /></td>
+                <td><input id="performanceExp" type="checkbox" ng-model="$ctrl.performance.exp" ng-change="$ctrl.updateSkills()" /></td>
+                <td>CHA</td>
+                <td><input id="performanceMod" type="number" ng-model="$ctrl.ability.chaMod" /></td>
+            </tr>
+            <tr>
+                <td>Persuasion</td>
+                <td><input id="persuasionProf" type="checkbox" ng-model="$ctrl.persuasion.prof" ng-change="$ctrl.updateSkills()" /></td>
+                <td><input id="persuasionExp" type="checkbox" ng-model="$ctrl.persuasion.exp" ng-change="$ctrl.updateSkills()" /></td>
+                <td>CHA</td>
+                <td><input id="persuasionMod" type="number" ng-model="$ctrl.ability.chaMod" /></td>
+            </tr>
+            <tr>
+                <td>Religion</td>
+                <td><input id="religionProf" type="checkbox" ng-model="$ctrl.religion.prof" ng-change="$ctrl.updateSkills()" /></td>
+                <td><input id="religionExp" type="checkbox" ng-model="$ctrl.religion.exp" ng-change="$ctrl.updateSkills()" /></td>
+                <td>INT</td>
+                <td><input id="religionMod" type="number" ng-model="$ctrl.ability.intMod" /></td>
+            </tr>
+            <tr>
+                <td>Sleight of Hand</td>
+                <td><input id="sleightofhandProf" type="checkbox" ng-model="$ctrl.sleightofhand.prof" ng-change="$ctrl.updateSkills()" /></td>
+                <td><input id="sleightofhandExp" type="checkbox" ng-model="$ctrl.sleightofhand.exp" ng-change="$ctrl.updateSkills()" /></td>
+                <td>DEX</td>
+                <td><input id="sleightofhandMod" type="number" ng-model="$ctrl.ability.dexMod" /></td>
+            </tr>
+            <tr>
+                <td>Stealth</td>
+                <td><input id="stealthProf" type="checkbox" ng-model="$ctrl.stealth.prof" ng-change="$ctrl.updateSkills()" /></td>
+                <td><input id="stealthExp" type="checkbox" ng-model="$ctrl.stealth.exp" ng-change="$ctrl.updateSkills()" /></td>
+                <td>DEX</td>
+                <td><input id="stealthMod" type="number" ng-model="$ctrl.ability.dexMod" /></td>
+            </tr>
+            <tr>
+                <td>Survival</td>
+                <td><input id="survivalProf" type="checkbox" ng-model="$ctrl.survival.prof" ng-change="$ctrl.updateSkills()" /></td>
+                <td><input id="survivalsExp" type="checkbox" ng-model="$ctrl.survival.exp" ng-change="$ctrl.updateSkills()" /></td>
+                <td>WIS</td>
+                <td><input id="survivalMod" type="number" ng-model="$ctrl.ability.wisMod" /></td>
             </tr>
         </table>
     </p>
