@@ -3,8 +3,8 @@ exports.seed = (knex, Promise) => {
   .then(() => {
     return Promise.join(
       knex('player').insert({
-        username: 'raukus',
-        password: 'baukus'
+        username: 'raukusbaukus',
+        password: 'dragons'
       })
     );
   });

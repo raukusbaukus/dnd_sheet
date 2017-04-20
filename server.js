@@ -10,6 +10,8 @@ var sheetCtrl = require('./controllers/sheetCtrl');
 var app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/../', 'node_modules')))
+
 
 app.use(cors());
 app.use(bodyParser.json());

@@ -105,17 +105,37 @@ exports.up = function(knex, Promise) {
 
     knex.schema.createTable('features', function(table) {
       table.integer('id').references('id').inTable('player').onDelete('cascade');
-
+      table.string('name');
+      table.string('source');
+      table.text('desc');
     }),
 
     knex.schema.createTable('spells', function(table) {
       table.integer('id').references('id').inTable('player').onDelete('cascade');
+      table.string('name');
+      table.string('source');
+      table.text('desc');
+      table.text('higher_level');
+      table.string('page');
+      table.string('range');
+      table.string('components');
+      table.string('material');
+      table.string('ritual');
+      table.string('duration');
+      table.string('concentration');
+      table.string('casting_time');
+      table.string('level');
+      table.string('school');
+      table.string('url');
 
     }),
 
     knex.schema.createTable('inventory', function(table) {
       table.integer('id').references('id').inTable('player').onDelete('cascade');
-
+      table.string('name');
+      table.integer('quantity');
+      table.decimal('weight');
+      table.text('desc');
     })
 
   ])
