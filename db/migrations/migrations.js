@@ -9,19 +9,21 @@ exports.up = function(knex, Promise) {
 
     knex.schema.createTable('core', function(table) {
       table.integer('id').references('id').inTable('player').onDelete('cascade');
+      table.increments('core_id').unique().primary();
       table.string('charName');
       table.string('race');
       table.string('class');
       table.integer('level').notNullable().defaultTo(1);
       table.integer('hitDice').notNullable().defaultTo(6);
       table.integer('hitPoints').notNullable().defaultTo(6);
-      table.integer('speed').notNullable().defaultTo(30);
+      table.string('speed').defaultTo('Walking: 30ft');
       table.enu('spellCasting', ['none', 'third', 'half', 'full', 'custom']).notNullable().defaultsTo('none');
       table.enu('spellStat', ['str', 'dex', 'con', 'int', 'wis', 'cha']).defaultsTo('int');
     }),
 
     knex.schema.createTable('ability_scores', function(table) {
       table.integer('id').references('id').inTable('player').onDelete('cascade');
+      table.increments('abils_id').unique().primary();
       table.integer('strBase').notNullable().defaultTo(8);
       table.integer('dexBase').notNullable().defaultTo(8);
       table.integer('conBase').notNullable().defaultTo(8);
@@ -44,6 +46,7 @@ exports.up = function(knex, Promise) {
 
     knex.schema.createTable('skills', function(table) {
       table.integer('id').references('id').inTable('player').onDelete('cascade');
+      table.increments('skills_id').unique().primary();
       table.boolean('jackOfAllTrades').defaultsTo(false);
       table.boolean('acrobaticsProf').defaultsTo(false);
       table.boolean('acrobaticsExp').defaultsTo(false);
@@ -105,6 +108,7 @@ exports.up = function(knex, Promise) {
 
     knex.schema.createTable('features', function(table) {
       table.integer('id').references('id').inTable('player').onDelete('cascade');
+      table.increments('feature_id').unique().primary();
       table.string('name');
       table.string('source');
       table.text('desc');
@@ -112,6 +116,7 @@ exports.up = function(knex, Promise) {
 
     knex.schema.createTable('spells', function(table) {
       table.integer('id').references('id').inTable('player').onDelete('cascade');
+      table.increments('spell_id').unique().primary();
       table.string('name');
       table.string('source');
       table.text('desc');
@@ -132,6 +137,7 @@ exports.up = function(knex, Promise) {
 
     knex.schema.createTable('inventory', function(table) {
       table.integer('id').references('id').inTable('player').onDelete('cascade');
+      table.increments('inventory_id').unique().primary();
       table.string('name');
       table.integer('quantity');
       table.decimal('weight');

@@ -1,64 +1,11 @@
 <form>
     <p><label for="charName">Character Name: </label><input id="charName" type="string" ng-model="$ctrl.core.charName"/></p>
-    <p><label for="pointCost">Point Buy Cost: </label><input id="pointCost" type="number" ng-model="$ctrl.ability.pointCost"/></p>
-    <p>
-        <table>
-            <tr>
-                <th>Ability</th>
-                <th>Base Score</th>
-                <th>Racial Bonuses</th>
-                <th>ASI Bonuses</th>
-                <th>Total Score</th>
-                <th>Modifier</th>
-            </tr>
-            <tr>
-                <td>Strength</td>
-                <td><input id="str" type="number" ng-model="$ctrl.ability.strBase" required min="3" max="15" step="1" ng-change="$ctrl.updateAbils()" /></td>
-                <td><input id="strBonus" type="number" ng-model="$ctrl.ability.strBonus" min="-2" max="4" step="1" ng-change="$ctrl.updateAbils()" /></td>
-                <td><input id="strASI" type="number" ng-model="$ctrl.ability.strASI" min="0" max="12" step="1" ng-change="$ctrl.updateAbils()" /></td>
-                <td><input id="strTotal" type="number" ng-model="$ctrl.ability.strTotal" disabled/></td>
-                <td><input id="strMod" type="number" ng-model="$ctrl.ability.strMod" disabled/></td>
-            </tr>
-            <tr>
-                <td>Dexterity</td>
-                <td><input id="dex" type="number" ng-model="$ctrl.ability.dexBase" required min="3" max="15" step="1" ng-change="$ctrl.updateAbils()" /></td>
-                <td><input id="dexBonus" type="number" ng-model="$ctrl.ability.dexBonus" min="-2" max="4" step="1" ng-change="$ctrl.updateAbils()" /></td>
-                <td><input id="dexASI" type="number" ng-model="$ctrl.ability.dexASI" min="0" max="12" step="1" ng-change="$ctrl.updateAbils()" /></td>
-                <td><input id="dexTotal" type="number" ng-model="$ctrl.ability.dexTotal" disabled/></td>
-                <td><input id="dexMod" type="number" ng-model="$ctrl.ability.dexMod" disabled/></td>
-            </tr>
-            <tr>
-                <td>Constitution</td>
-                <td><input id="con" type="number" ng-model="$ctrl.ability.conBase" required min="3" max="15" step="1" ng-change="$ctrl.updateAbils()" /></td>
-                <td><input id="conBonus" type="number" ng-model="$ctrl.ability.conBonus" min="-2" max="4" step="1" ng-change="$ctrl.updateAbils()" /></td>
-                <td><input id="conASI" type="number" ng-model="$ctrl.ability.conASI" min="0" max="12" step="1" ng-change="$ctrl.updateAbils()" /></td>
-                <td><input id="conTotal" type="number" ng-model="$ctrl.ability.conTotal" disabled/></td>
-                <td><input id="conMod" type="number" ng-model="$ctrl.ability.conMod" disabled/></td>
-            </tr>
-            <tr>
-                <td>Intelligence</td>
-                <td><input id="int" type="number" ng-model="$ctrl.ability.intBase" required min="3" max="15" step="1" ng-change="$ctrl.updateAbils()" /></td>
-                <td><input id="intBonus" type="number" ng-model="$ctrl.ability.intBonus" min="-2" max="4" step="1" ng-change="$ctrl.updateAbils()" /></td>
-                <td><input id="intASI" type="number" ng-model="$ctrl.ability.intASI" min="0" max="12" step="1" ng-change="$ctrl.updateAbils()" /></td>
-                <td><input id="intTotal" type="number" ng-model="$ctrl.ability.intTotal" disabled/></td>
-                <td><input id="intMod" type="number" ng-model="$ctrl.ability.intMod" disabled/></td>
-            </tr>
-            <tr>
-                <td>Wisdom</td>
-                <td><input id="wis" type="number" ng-model="$ctrl.ability.wisBase" required min="3" max="15" step="1" ng-change="$ctrl.updateAbils()" /></td>
-                <td><input id="wisBonus" type="number" ng-model="$ctrl.ability.wisBonus" min="-2" max="4" step="1" ng-change="$ctrl.updateAbils()" /></td>
-                <td><input id="wisASI" type="number" ng-model="$ctrl.ability.wisASI" min="0" max="12" step="1" ng-change="$ctrl.updateAbils()" /></td>
-                <td><input id="wisTotal" type="number" ng-model="$ctrl.ability.wisTotal" disabled/></td>
-                <td><input id="wisMod" type="number" ng-model="$ctrl.ability.wisMod" disabled/></td>
-            </tr>
-            <tr>
-                <td>Charisma</td>
-                <td><input id="cha" type="number" ng-model="$ctrl.ability.chaBase" required min="3" max="15" step="1" ng-change="$ctrl.updateAbils()" /></td>
-                <td><input id="chaBonus" type="number" ng-model="$ctrl.ability.chaBonus" min="-2" max="4" step="1" ng-change="$ctrl.updateAbils()" /></td>
-                <td><input id="chaASI" type="number" ng-model="$ctrl.ability.chaASI" min="0" max="12" step="1" ng-change="$ctrl.updateAbils()" /></td>
-                <td><input id="chaTotal" type="number" ng-model="$ctrl.ability.chaTotal" disabled/></td>
-                <td><input id="chaMod" type="number" ng-model="$ctrl.ability.chaMod" disabled/></td>
-            </tr>
-        </table>
-    </p>
+    <p><label for="race">Race: </label><input id="race" type="string" ng-model="$ctrl.core.race" required/></p>
+    <p><label for="class">Class: </label><input id="race" type="string" ng-model="$ctrl.core.class" required/></p>
+    <p><label for="level">Level: </label><input id="race" type="number" ng-model="$ctrl.core.level" required min="1" max="20" step="1"/></p>
+    <p><label for="hitDice">Hit Dice: </label><input id="hitDice" type="number" ng-model="$ctrl.core.hitDice" required min="6" max="12" step="2"/></p>
+    <p><label for="hitPoints">Hit Points: </label><input id="hitPoints" type="number" ng-model="$ctrl.core.hitPoints" required min="1"/></p>
+    <p><label for="hitPoints">Speed: </label><input id="speed" type="string" ng-model="$ctrl.core.speed"/></p>
+    <p><label for="spellCasting">Spellcasting Progression: </label><input id="spellCasting" type="string" ng-model="$ctrl.core.spellCasting"/></p>
+    <p><label for="spellStat">Spellcasting Stat: </label><input id="spellStat" type="string" ng-model="$ctrl.core.spellStat"/></p>
 </form>

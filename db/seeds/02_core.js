@@ -10,7 +10,7 @@ exports.seed = (knex, Promise) => {
         level: 7,
         hitDice: 10,
         hitPoints: 74,
-        speed: 25,
+        speed: 'Walking: 25ft',
         spellCasting: 'third',
         spellStat: 'int'
       })

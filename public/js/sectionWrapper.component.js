@@ -16,7 +16,7 @@
     const vm = this
 
     vm.$onInit = function $onInit() {
-      console.log('sectionWrapper init')
+      
     }
 
     vm.navigate = function(e) {

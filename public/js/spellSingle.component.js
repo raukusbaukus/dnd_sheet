@@ -2,12 +2,12 @@
   'use strict'
 
   angular.module('dndSheet')
-    .component('spellSearch', {
+    .component('spellSingle', {
       bindings: {
         post: '='
       },
       controller: controller,
-      templateUrl: 'templates/spellSearch.html'
+      templateUrl: 'templates/spellSingle.html'
     })
 
   controller.$inject = ['$scope', '$state', '$stateParams', '$http']
