@@ -4,7 +4,7 @@
   angular.module('dndSheet')
     .component('inventoryForm', {
       bindings: {
-        post: '='
+        character: '='
       },
       controller: controller,
       templateUrl: 'templates/inventoryForm.html'

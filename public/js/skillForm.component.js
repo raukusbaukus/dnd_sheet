@@ -4,7 +4,7 @@
   angular.module('dndSheet')
     .component('skillForm', {
       bindings: {
-        post: '='
+        character: '='
       },
       controller: controller,
       templateUrl: 'templates/skillForm.html'

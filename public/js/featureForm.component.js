@@ -4,7 +4,7 @@
   angular.module('dndSheet')
     .component('featureForm', {
       bindings: {
-        post: '='
+        character: '='
       },
       controller: controller,
       templateUrl: 'templates/featureForm.html'

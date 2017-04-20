@@ -4,7 +4,7 @@
   angular.module('dndSheet')
     .component('featureSingle', {
       bindings: {
-        post: '='
+        character: '='
       },
       controller: controller,
       templateUrl: 'templates/featureSingle.html'

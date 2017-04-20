@@ -4,7 +4,7 @@
   angular.module('dndSheet')
     .component('loginForm', {
       bindings: {
-        post: '='
+        character: '='
       },
       controller: controller,
       templateUrl: 'templates/loginForm.html'

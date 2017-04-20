@@ -11,9 +11,9 @@
 </head>
 
 <body class="grey" ng-controller="sheetCtrl">
-  <h1>D&D Character Sheets</h1>
+  <h1>D&D Character Sheet</h1>
   <!-- <ui-view></ui-view> -->
-  <section-wrapper></section-wrapper>
+  <section-wrapper character="$ctrl.character"></section-wrapper>
 
   <script src="/angular/angular.js"></script>
   <script src="/angular-ui-router/release/angular-ui-router.min.js"></script>

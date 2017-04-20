@@ -4,7 +4,7 @@
   angular.module('dndSheet')
     .component('spellForm', {
       bindings: {
-        post: '='
+        character: '='
       },
       controller: controller,
       templateUrl: 'templates/spellForm.html'

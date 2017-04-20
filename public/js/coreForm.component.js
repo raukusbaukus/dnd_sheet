@@ -4,7 +4,7 @@
   angular.module('dndSheet')
     .component('coreForm', {
       bindings: {
-        post: '='
+        character: '='
       },
       controller: controller,
       templateUrl: 'templates/coreForm.html'

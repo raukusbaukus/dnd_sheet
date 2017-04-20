@@ -4,7 +4,7 @@
   angular.module('dndSheet')
     .component('featureSearch', {
       bindings: {
-        post: '='
+        character: '='
       },
       controller: controller,
       templateUrl: 'templates/featureSearch.html'

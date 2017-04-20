@@ -4,7 +4,7 @@
   angular.module('dndSheet')
     .component('spellSearch', {
       bindings: {
-        post: '='
+        character: '='
       },
       controller: controller,
       templateUrl: 'templates/spellSearch.html'

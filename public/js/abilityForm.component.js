@@ -4,7 +4,7 @@
   angular.module('dndSheet')
     .component('abilityForm', {
       bindings: {
-        post: '='
+        character: '='
       },
       controller: controller,
       templateUrl: 'templates/abilityForm.html'

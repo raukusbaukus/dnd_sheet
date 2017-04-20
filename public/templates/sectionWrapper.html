@@ -1,25 +1,24 @@
 <div>
   <button ng-click="toggleCore=!toggleCore">Character Details</button>
-  <core-form ng-show="toggleCore"></core-form>
+  <core-form ng-show="toggleCore" character="$ctrl.character"></core-form>
 </div>
-
 <div>
   <button ng-click="toggleAbils=!toggleAbils">Ability Scores</button>
-  <ability-form ng-show="toggleAbils"></ability-form>
+  <ability-form ng-show="toggleAbils" character="$ctrl.character"></ability-form>
 </div>
 <div>
   <button ng-click="toggleSkills=!toggleSkills">Skills</button>
-  <skill-form ng-show="toggleSkills"></skill-form>
+  <skill-form ng-show="toggleSkills" character="$ctrl.character"></skill-form>
 </div>
 <div>
   <button ng-click="toggleFeatures=!toggleFeatures">Features</button>
-  <feature-form ng-show="toggleFeatures"></feature-form>
+  <feature-form ng-show="toggleFeatures" character="$ctrl.character"></feature-form>
 </div>
 <div>
   <button ng-click="toggleSpells=!toggleSpells">Spells</button>
-  <spell-form ng-show="toggleSpells"></spell-form>
+  <spell-form ng-show="toggleSpells" character="$ctrl.character"></spell-form>
 </div>
 <div>
   <button ng-click="toggleInventory=!toggleInventory">Inventory</button>
-  <inventory-form ng-show="toggleInventory"></inventory-form>
+  <inventory-form ng-show="toggleInventory" character="$ctrl.character"></inventory-form>
 </div>
