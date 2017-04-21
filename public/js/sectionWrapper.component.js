@@ -18,7 +18,6 @@
     const playerId = 1
     $http.get(`/all/${playerId}`).then(character => {
       vm.character = character.data //how to get this on global scope?
-      console.log('character', vm.character)
     })
 
     vm.$onInit = function $onInit() {

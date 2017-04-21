@@ -26,13 +26,55 @@ function getAll(req, res) {
   let spellsP = knex.select()
     .from('spells')
     .where('id', req.params.id);
-  let inventoryP = knex.select()
+  let inventoryP = knex.select('')
     .from('inventory')
     .where('id', req.params.id);
   let promiseArr = [coreP, abilsP, skillsP, featuresP, spellsP, inventoryP];
   Promise.all(promiseArr)
     .then(data => {
-      let [[core], [abils], [skills], [features], [spells], [inventory]] = data;
+      let [
+        [core],
+        [abils],
+        [skills], features, spells, inventory
+      ] = data;
+      res.status(200).send({
+        core,
+        abils,
+        skills,
+        features,
+        spells,
+        inventory
+      })
+    })
+};
+
+function postAll(req, res) {
+  let coreP = knex.select()
+    .from('core')
+    .where('id', req.params.id);
+  let abilsP = knex.select()
+    .from('ability_scores')
+    .where('id', req.params.id);
+  let skillsP = knex.select()
+    .from('skills')
+    .where('id', req.params.id);
+  let featuresP = knex.select()
+    .from('features')
+    .where('id', req.params.id);
+  let spellsP = knex.select()
+    .from('spells')
+    .where('id', req.params.id);
+  let inventoryP = knex.select('')
+    .from('inventory')
+    .where('id', req.params.id);
+  let promiseArr = [coreP, abilsP, skillsP, featuresP, spellsP, inventoryP];
+  Promise.all(promiseArr)
+    .then(data => {
+      let [
+        [core],
+        [abils],
+        [skills], features, spells, inventory
+      ] = data;
       res.status(200).send({
         core,
         abils,
@@ -90,15 +132,15 @@ function getInventory(req, res) {
 function postCore(req, res) {
   knex('core').insert({
       id: req.body.id,
-      charName: req.body.charName,
-      race: req.body.race,
-      class: req.body.class,
-      level: req.body.level,
-      hitDice: req.body.hitDice,
-      hitPoints: req.body.hitPoints,
-      ace: req.body.race,
-      ace: req.body.race,
-      ace: req.body.race,
+      charName: req.body.core.charName,
+      race: req.body.core.race,
+      class: req.body.core.class,
+      level: req.body.core.level,
+      hitDice: req.body.core.hitDice,
+      hitPoints: req.body.core.hitPoints,
+      speed: req.body.core.speed,
+      spellCasting: req.body.core.spellCasting,
+      spellStat: req.body.core.spellStat,
     })
     .then(() => {
       res.status(200).send(data)

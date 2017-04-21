@@ -1,6 +1,14 @@
 <div>
   <feature-search></feature-search>
 </div>
-<div>
-  <feature-single></feature-single>
-</div>
+<form class="pure-form">
+  <table class="screen" ng-repeat="feature in $ctrl.character.features">
+      <tr>
+        <td><label for="name">Name:</label><input id="name" type="string" ng-model="feature.name" /> <label for="charName">Rules Source: </label><input id="name" type="string" ng-model="feature.source" /></td>
+      </tr>
+      <tr>
+        <td>
+          <p><label for="desc">Description: </label></p><textarea id="desc" ng-model="feature.desc" rows="5" cols="75" /></td>
+        <!-- <td><button ng-click="removeFeature(feature.feature_id)">Remove</button></td> -->
+      </tr>
+</form>

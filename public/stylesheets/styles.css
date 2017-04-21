@@ -1,3 +1,63 @@
-.grey {
-  background-color: #999;
+html {
+  height: auto;
+  min-height: 100%;
+  background: #356e7a;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #356e7a 0%, #7282a8 53%, #64537a 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #356e7a 0%, #7282a8 53%, #64537a 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #356e7a 0%, #7282a8 53%, #64537a 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#356e7a', endColorstr='#64537a', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
 }
+
+html, button, input, select, textarea, .pure-g [class *="pure-u"] {
+  /* Set your content font stack here: */
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 80%;
+  letter-spacing: normal;
+}
+
+.pure-button-primary {
+  background-color: #274A65;
+  margin: 0.5rem;
+}
+
+.fancyfont {
+  font-family: 'Milonga', cursive;
+  color: black;
+}
+
+.titletext {
+  font-size: 3rem;
+  text-shadow: 1px 1px 0px rgba(247, 230, 197, 0.6);
+}
+
+.buttontext {
+  color: rgba(247, 230, 197, 1);
+  font-size: 1rem;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
+}
+
+input, textarea {
+  background-color: rgba(247, 230, 197, 0.8);
+  color: black;
+  outline: none;
+}
+
+.screen {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 3px;
+  border-style: double;
+  border-radius: 3px;
+  margin: 5px;
+}
+
+tbody {
+  padding: 1rem;
+}
+
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#356e7a+0,7282a8+53,64537a+100 */

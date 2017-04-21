@@ -110,7 +110,6 @@ exports.up = function(knex, Promise) {
       table.integer('id').references('id').inTable('player').onDelete('cascade');
       table.increments('feature_id').unique().primary();
       table.string('name');
-      table.string('source');
       table.text('desc');
     }),
 

@@ -1,0 +1,17 @@
+<h2>Login / Sign-up</h2>
+<form class="pure-form" novalidate name="$ctrl.userForm" ng-submit="$ctrl.submit()">
+  <p><label for="username">Username: </label><input id="username" type="text" ng-model="$ctrl.player.username" required ng-minlength=4 ng-maxlength=15 /></p>
+  <div class="error-container" ng-show="$ctrl.userForm.username.$invalid">
+    <small class="error" ng-show="$ctrl.userForm.username.$error.required">Please input a Username.</small>
+    <small class="error" ng-show="$ctrl.userForm.username.$error.minlength">Username is required to be at least 4 characters.</small>
+    <small class="error" ng-show="$ctrl.userForm.username.$error.maxlength">Username cannot be longer than 15 characters.</small>
+  </div>
+  <p><label for="password">Password: </label><input id="password" type="password" ng-model="$ctrl.player.password" required ng-minlength=4 ng-maxlength=15 /></p>
+  <div class="error-container" ng-show="$ctrl.userForm.password.$invalid">
+    <small class="error" ng-show="$ctrl.userForm.password.$error.required">Please input a Password.</small>
+    <small class="error" ng-show="$ctrl.userForm.password.$error.minlength">Password is required to be at least 4 characters.</small>
+    <small class="error" ng-show="$ctrl.userForm.password.$error.maxlength">Password cannot be longer than 15 characters.</small>
+  </div>
+  <p><button type="submit" class="pure-button" ng-disabled="$ctrl.userForm.$invalid" ng-click="$ctrl.login($ctrl.player.username, $ctrl.player.password)"><i class="ra ra-forging"></i>  Login Existing User  <i class="ra ra-forging"></i></button>
+    <button type="submit" class="pure-button" ng-disabled="$ctrl.userForm.$invalid" ng-click="$ctrl.create($ctrl.player.username, $ctrl.player.password)"><i class="ra ra-acid"></i>  Create New User  <i class="ra ra-acid"></i></button></p>
+</form>

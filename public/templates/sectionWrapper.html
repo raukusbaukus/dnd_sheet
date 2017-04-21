@@ -1,24 +1,33 @@
-<div>
-  <button ng-click="toggleCore=!toggleCore">Character Details</button>
-  <core-form ng-show="toggleCore" character="$ctrl.character"></core-form>
-</div>
-<div>
-  <button ng-click="toggleAbils=!toggleAbils">Ability Scores</button>
-  <ability-form ng-show="toggleAbils" character="$ctrl.character"></ability-form>
-</div>
-<div>
-  <button ng-click="toggleSkills=!toggleSkills">Skills</button>
-  <skill-form ng-show="toggleSkills" character="$ctrl.character"></skill-form>
-</div>
-<div>
-  <button ng-click="toggleFeatures=!toggleFeatures">Features</button>
-  <feature-form ng-show="toggleFeatures" character="$ctrl.character"></feature-form>
-</div>
-<div>
-  <button ng-click="toggleSpells=!toggleSpells">Spells</button>
-  <spell-form ng-show="toggleSpells" character="$ctrl.character"></spell-form>
-</div>
-<div>
-  <button ng-click="toggleInventory=!toggleInventory">Inventory</button>
-  <inventory-form ng-show="toggleInventory" character="$ctrl.character"></inventory-form>
+<div class="pure-g">
+  <div class="pure-u-5-6 pure-u-md-1-24">
+    <!-- <div>
+      <login-form></login-form>
+    </div> -->
+    <div>
+      <div>
+        <button class="pure-button pure-button-primary fancyfont buttontext" ng-click="toggleCore=!toggleCore"><i class="ra ra-book"></i>    Character Details    <i class="ra ra-book"></i></button>
+        <core-form ng-show="toggleCore" character="$ctrl.character"></core-form>
+      </div>
+      <div>
+        <button class="pure-button pure-button-primary fancyfont buttontext" ng-click="toggleAbils=!toggleAbils"><i class="ra ra-crystal-ball"></i>    Ability Scores    <i class="ra ra-crystal-ball"></i></button>
+        <ability-form ng-show="toggleAbils" character="$ctrl.character"></ability-form>
+      </div>
+      <div>
+        <button class="pure-button pure-button-primary fancyfont buttontext" ng-click="toggleSkills=!toggleSkills"><i class="ra ra-forging"></i>    Skills    <i class="ra ra-forging"></i></button>
+        <skill-form ng-show="toggleSkills" character="$ctrl.character"></skill-form>
+      </div>
+      <div>
+        <button class="pure-button pure-button-primary fancyfont buttontext" ng-click="toggleFeatures=!toggleFeatures"><i class="ra ra-lightning-sword"></i>    Features    <i class="ra ra-lightning-sword"></i></button>
+        <feature-form ng-show="toggleFeatures" character="$ctrl.character"></feature-form>
+      </div>
+      <div>
+        <button class="pure-button pure-button-primary fancyfont buttontext" ng-click="toggleSpells=!toggleSpells"><i class="ra ra-incense"></i>    Spells    <i class="ra ra-incense"></i></button>
+        <spell-form ng-show="toggleSpells" character="$ctrl.character"></spell-form>
+      </div>
+      <div>
+        <button class="pure-button pure-button-primary fancyfont buttontext" ng-click="toggleInventory=!toggleInventory"><i class="ra ra-torch"></i>    Inventory    <i class="ra ra-torch"></i></button>
+        <inventory-form ng-show="toggleInventory" character="$ctrl.character"></inventory-form>
+      </div>
+    </div>
+  </div>
 </div>

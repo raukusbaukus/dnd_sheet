@@ -5,16 +5,28 @@
   <meta charset="utf-8">
   <base href="/">
   <title>D&D Character Sheets</title>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css">
+  <link href="https://fonts.googleapis.com/css?family=Milonga" rel="stylesheet">
+  <link rel="stylesheet" href="rpg-awesome/css/rpg-awesome.css" />
   <link href="/stylesheets/styles.css" rel="stylesheet">
+
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 </head>
 
 <body class="grey" ng-controller="sheetCtrl">
-  <h1>D&D Character Sheet</h1>
-  <!-- <ui-view></ui-view> -->
-  <section-wrapper character="$ctrl.character"></section-wrapper>
-
+  <div class="pure-g">
+    <div class="pure-u-1-12 pure-u-md-1-24">
+    </div>
+    <div class="pure-u-10-12 pure-u-md-11-12">
+      <h1 class="fancyfont titletext"><i class="ra ra-wyvern ra-lg"></i> D&D Sheets <i class="ra ra-wyvern ra-lg"></i></h1>
+      <h3 class="fancyfont">A character sheet generator for 5th edition Dungeons & Dragons</h3>
+      <section-wrapper character="$ctrl.character"></section-wrapper>
+    </div>
+    <div class="pure-u-1-12 pure-u-md-1-24">
+    </div>
+  </div>
   <script src="/angular/angular.js"></script>
   <script src="/angular-ui-router/release/angular-ui-router.min.js"></script>
   <script src="js/dndSheet.module.js"></script>
@@ -23,14 +35,11 @@
   <script src="js/coreForm.component.js"></script>
   <script src="js/featureForm.component.js"></script>
   <script src="js/featureSearch.component.js"></script>
-  <script src="js/featureSingle.component.js"></script>
   <script src="js/inventoryForm.component.js"></script>
-  <script src="js/inventorySingle.component.js"></script>
   <script src="js/loginForm.component.js"></script>
   <script src="js/sectionWrapper.component.js"></script>
   <script src="js/skillForm.component.js"></script>
   <script src="js/spellForm.component.js"></script>
-  <script src="js/spellSingle.component.js"></script>
   <script src="js/spellSearch.component.js"></script>
 
 </body>

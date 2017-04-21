@@ -24,7 +24,7 @@ app.listen(port, function() {
 app.get('/all/:id', sheetCtrl.getAll);
 app.get('/core/:id', sheetCtrl.getCore);
 app.get('/abils/:id', sheetCtrl.getAbils);
-app.get('/skills/:id', sheetCtrl.getCore);
-app.get('/features/:id', sheetCtrl.getCore);
-app.get('/spells/:id', sheetCtrl.getCore);
-app.get('/inventory/:id', sheetCtrl.getCore);
+app.get('/skills/:id', sheetCtrl.getSkills);
+app.get('/features/:id', sheetCtrl.getFeatures);
+app.get('/spells/:id', sheetCtrl.getSpells);
+app.get('/inventory/:id', sheetCtrl.getInventory);

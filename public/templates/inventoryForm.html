@@ -1,1 +1,15 @@
-<inventory-single></inventory-single>
+<form class="pure-form">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Quantity</th>
+      <th>Weight</th>
+      <th>Description</th>
+    </tr>
+    <tr ng-repeat="item in $ctrl.character.inventory">
+      <td><input id="name" type="string" ng-model="item.name" /></td>
+      <td><input id="quantity" type="number" min="0" ng-model="item.quantity" /></td>
+      <td><input id="weight" type="decimal" min="0" ng-model="item.weight" /></td>
+      <td><textarea id="desc" ng-model="item.desc" /></td>
+    </tr>
+</form>
